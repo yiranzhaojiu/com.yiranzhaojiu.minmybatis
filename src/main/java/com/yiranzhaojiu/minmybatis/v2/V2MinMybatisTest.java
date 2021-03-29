@@ -14,7 +14,9 @@ public class V2MinMybatisTest {
             SqlSession sqlSession = sqlSessiionFactory.openSession();
             EmpUserMapper mapper = sqlSession.getMapper(EmpUserMapper.class);
             EmpUserEntity empUserEntity = mapper.selectEmpUserInfo(1);
+            EmpUserEntity empUserEntity1 = mapper.selectEmpUserInfo(1);
             System.out.println(empUserEntity);
+            System.out.println(empUserEntity1);
         } catch (BindException e) {
             e.printStackTrace();
         }

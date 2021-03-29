@@ -1,7 +1,6 @@
 package com.yiranzhaojiu.minmybatis.v2.session;
 
 import com.yiranzhaojiu.minmybatis.v2.executor.Executor;
-import com.yiranzhaojiu.minmybatis.v2.executor.SimpleExecutor;
 import java.net.BindException;
 
 public class DefaultSqlSession implements SqlSession {
@@ -11,7 +10,7 @@ public class DefaultSqlSession implements SqlSession {
 
     public DefaultSqlSession(Configuration configuration){
         this.configuration=configuration;
-        this.executor=new SimpleExecutor();
+        this.executor=configuration.newExecutor();
     }
 
     @Override

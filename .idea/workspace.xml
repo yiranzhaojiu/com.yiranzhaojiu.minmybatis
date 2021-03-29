@@ -71,7 +71,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.V2MinMybatisTest">
     <configuration name="MinMybatisTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yiranzhaojiu.minmybatis.v1.MinMybatisTest" />
       <module name="com.yiranzhaojiu.minmybatis" />
@@ -98,6 +98,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.MinMybatisTest" />
+      <item itemvalue="Application.V2MinMybatisTest" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.V2MinMybatisTest" />
@@ -115,7 +119,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616964316433</updated>
-      <workItem from="1616964325844" duration="28760000" />
+      <workItem from="1616964325844" duration="32032000" />
     </task>
     <servers />
   </component>
@@ -142,32 +146,19 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/yiranzhaojiu/minmybatis/v2/parameter/ParameterHandler.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="18" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/yiranzhaojiu/minmybatis/v2/session/Configuration.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/yiranzhaojiu/minmybatis/v2/executor/StatementHandler.java</url>
-          <line>9</line>
-          <option name="timeStamp" value="19" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/yiranzhaojiu/minmybatis/v2/executor/CachingExecutor.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/yiranzhaojiu/minmybatis/v2/V2MinMybatisTest.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/yiranzhaojiu/minmybatis/v2/V2MinMybatisTest.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/yiranzhaojiu/minmybatis/v2/executor/Executor.java</url>
-          <line>3</line>
-          <properties class="com.yiranzhaojiu.minmybatis.v2.executor.Executor" method="query">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="23" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/yiranzhaojiu/minmybatis/v2/cache/CacheKey.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

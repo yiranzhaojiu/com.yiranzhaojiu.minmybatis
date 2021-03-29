@@ -8,9 +8,9 @@ public class MapperProxy  implements InvocationHandler {
 
     private SqlSession sqlSession;
     Class resultClazz;
-    public MapperProxy(SqlSession sqlSession,Class resultClazz){
-        this.sqlSession=sqlSession;
-         this.resultClazz=resultClazz;
+    public MapperProxy(SqlSession sqlSession,Class resultClazz) {
+        this.sqlSession = sqlSession;
+        this.resultClazz = resultClazz;
     }
 
     @Override

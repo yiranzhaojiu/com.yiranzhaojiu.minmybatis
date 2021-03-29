@@ -2,6 +2,9 @@ package com.yiranzhaojiu.minmybatis.v2.session;
 
 import com.sun.javaws.security.AppContextUtil;
 import com.yiranzhaojiu.minmybatis.v2.binding.MapperRegistry;
+import com.yiranzhaojiu.minmybatis.v2.executor.CachingExecutor;
+import com.yiranzhaojiu.minmybatis.v2.executor.Executor;
+import com.yiranzhaojiu.minmybatis.v2.executor.SimpleExecutor;
 
 import java.net.BindException;
 import java.util.HashMap;
@@ -54,4 +57,16 @@ public class Configuration {
         return mappedStatements.get(statementId);
     }
 
+    /**
+     * 创建执行器
+     * */
+    public Executor newExecutor() {
+        Executor executor = new SimpleExecutor();
+        //判断是否开启了缓存配置，装饰器模式
+        if (properties.containsKey("mybatis.cached.enable") &&
+                properties.getString("mybatis.cached.enable").toUpperCase().equals("TRUE")) {
+            executor = new CachingExecutor(executor);
+        }
+        return executor;
+    }
 }
