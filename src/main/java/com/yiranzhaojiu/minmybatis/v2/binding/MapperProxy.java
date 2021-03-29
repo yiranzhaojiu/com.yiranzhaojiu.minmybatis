@@ -1,15 +1,16 @@
-package com.yiranzhaojiu.minmybatis.v2;
+package com.yiranzhaojiu.minmybatis.v2.binding;
 
+import com.yiranzhaojiu.minmybatis.v2.session.SqlSession;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
-public class ProxyInvocationHandler implements InvocationHandler {
+public class MapperProxy  implements InvocationHandler {
 
-    private YrzjSqlSession sqlSession;
-    private Class resultMap;
-    public ProxyInvocationHandler(YrzjSqlSession sqlSession,Class resultMap){
+    private SqlSession sqlSession;
+    Class resultClazz;
+    public MapperProxy(SqlSession sqlSession,Class resultClazz){
         this.sqlSession=sqlSession;
-        this.resultMap=resultMap;
+         this.resultClazz=resultClazz;
     }
 
     @Override
@@ -17,6 +18,6 @@ public class ProxyInvocationHandler implements InvocationHandler {
         String className = method.getDeclaringClass().getName();
         String methodName = method.getName();
         String statementId = className + "." + methodName;
-        return sqlSession.selectOne(statementId,args,resultMap);
+        return sqlSession.selectOne(statementId,args,resultClazz);
     }
 }

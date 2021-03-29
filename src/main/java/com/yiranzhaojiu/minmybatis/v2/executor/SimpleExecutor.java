@@ -1,6 +1,6 @@
 package com.yiranzhaojiu.minmybatis.v2.executor;
 
-public class YrzjSimpleExecutor implements YrzjBaseExcutor {
+public class SimpleExecutor implements Executor {
     @Override
     public <T> T query(String sql,Object[] paramters,Class<?> clazz) {
         StatementHandler handler=new StatementHandler();

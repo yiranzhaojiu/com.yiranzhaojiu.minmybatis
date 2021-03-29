@@ -1,8 +1,7 @@
 package com.yiranzhaojiu.minmybatis.v2.executor;
 
-import com.yiranzhaojiu.minmybatis.v2.YrzjConfiguration;
-import com.yiranzhaojiu.minmybatis.v2.business.entity.EmpUserEntity;
 import com.yiranzhaojiu.minmybatis.v2.parameter.ParameterHandler;
+import com.yiranzhaojiu.minmybatis.v2.session.Configuration;
 
 import java.sql.*;
 
@@ -45,9 +44,9 @@ public class StatementHandler {
 
     //SQL配置提取
     private Connection getConnectiion() throws SQLException {
-        String url= YrzjConfiguration.properties.getString("jdbc.url");
-        String user= YrzjConfiguration.properties.getString("jdbc.user");
-        String password= YrzjConfiguration.properties.getString("jdbc.password");
+        String url= Configuration.properties.getString("jdbc.url");
+        String user= Configuration.properties.getString("jdbc.user");
+        String password= Configuration.properties.getString("jdbc.password");
         return  DriverManager.getConnection(url,user,password);
     }
 
