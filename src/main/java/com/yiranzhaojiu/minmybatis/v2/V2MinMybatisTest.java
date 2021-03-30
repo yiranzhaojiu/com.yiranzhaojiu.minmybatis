@@ -5,8 +5,6 @@ import com.yiranzhaojiu.minmybatis.v2.business.mapper.EmpUserMapper;
 import com.yiranzhaojiu.minmybatis.v2.session.SqlSessiionFactory;
 import com.yiranzhaojiu.minmybatis.v2.session.SqlSession;
 
-import java.net.BindException;
-
 public class V2MinMybatisTest {
     public static void main(String[] args) { 
         try {
@@ -17,7 +15,7 @@ public class V2MinMybatisTest {
             EmpUserEntity empUserEntity1 = mapper.selectEmpUserInfo(1);
             System.out.println(empUserEntity);
             System.out.println(empUserEntity1);
-        } catch (BindException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

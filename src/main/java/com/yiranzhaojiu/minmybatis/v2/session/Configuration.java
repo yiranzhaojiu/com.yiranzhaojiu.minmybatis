@@ -1,16 +1,15 @@
 package com.yiranzhaojiu.minmybatis.v2.session;
 
-import com.sun.javaws.security.AppContextUtil;
 import com.yiranzhaojiu.minmybatis.v2.binding.MapperRegistry;
 import com.yiranzhaojiu.minmybatis.v2.executor.CachingExecutor;
 import com.yiranzhaojiu.minmybatis.v2.executor.Executor;
 import com.yiranzhaojiu.minmybatis.v2.executor.SimpleExecutor;
-
+import com.yiranzhaojiu.minmybatis.v2.plugin.Interceptor;
+import com.yiranzhaojiu.minmybatis.v2.plugin.InterceptorChain;
 import java.net.BindException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
-
 
 public class Configuration {
     //ResourceBundle 可以直接通过key获取值，键值对
@@ -21,6 +20,8 @@ public class Configuration {
     private static final Map<String,String> mappedStatements=new HashMap<>();
     //mapper接口文件对应的动态代理工厂类
     private static final MapperRegistry mapperRegistry=new MapperRegistry();
+    //插件链存储对象
+    private final InterceptorChain interceptorChain=new InterceptorChain();
 
     static {
         properties = ResourceBundle.getBundle("v2/mybatis-application");
@@ -30,9 +31,29 @@ public class Configuration {
     /**
      * 初始化
      * */
-    public Configuration(){
+    public Configuration() throws Exception{
+        pluginElement();
+        mapperElement();
+    }
+    /**
+     * 插件处理
+     * */
+    private void pluginElement() throws Exception {
+        if(!properties.containsKey("mybatis.plugins")) return;
+        String[] plugins = Configuration.properties.getString("mybatis.plugins").split(",");
+        for (String plugin:
+             plugins) {
+            Interceptor interceptorInstance=(Interceptor)Class.forName(plugin).newInstance();
+            //责任链模式，保存插件
+            interceptorChain.addInterceptor(interceptorInstance);
+        }
+    }
+    /**
+     * SQL文件处理
+     * */
+    private void mapperElement(){
         for (String  key:
-            sqlMaping.keySet()) {
+                sqlMaping.keySet()) {
             String str = sqlMaping.getString(key);
             String[] split = str.split("--resultEntity:");
             String sql = split[0];
@@ -67,6 +88,7 @@ public class Configuration {
                 properties.getString("mybatis.cached.enable").toUpperCase().equals("TRUE")) {
             executor = new CachingExecutor(executor);
         }
+        executor=(Executor) interceptorChain.pluginAll(executor);
         return executor;
     }
 }

@@ -45,18 +45,22 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\java-pro\com.yiranzhaojiu.minmybatis\src\main\java\com\yiranzhaojiu\minmybatis\v2" />
-      <recent name="G:\java-pro\com.yiranzhaojiu.minmybatis\src\main\resources\v2" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\java-pro\com.yiranzhaojiu.minmybatis\src\main\resources\v1" />
+      <recent name="G:\java-pro\com.yiranzhaojiu.minmybatis\src\main\resources" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.yiranzhaojiu.minmybatis.v2.interceptor" />
+      <recent name="com.yiranzhaojiu.minmybatis.v2.plugin" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.yiranzhaojiu.minmybatis.v2" />
       <recent name="com.yiranzhaojiu.minmybatis.v2.business" />
       <recent name="com.yiranzhaojiu.minmybatis.v2.buseness.entity" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\java-pro\com.yiranzhaojiu.minmybatis\src\main\resources\v1" />
-      <recent name="G:\java-pro\com.yiranzhaojiu.minmybatis\src\main\resources" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\java-pro\com.yiranzhaojiu.minmybatis\src\main\java\com\yiranzhaojiu\minmybatis\v2" />
+      <recent name="G:\java-pro\com.yiranzhaojiu.minmybatis\src\main\resources\v2" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -119,7 +123,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616964316433</updated>
-      <workItem from="1616964325844" duration="32032000" />
+      <workItem from="1616964325844" duration="32217000" />
+      <workItem from="1617089950807" duration="4704000" />
     </task>
     <servers />
   </component>
@@ -131,7 +136,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -146,19 +153,14 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/yiranzhaojiu/minmybatis/v2/session/Configuration.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/yiranzhaojiu/minmybatis/v2/executor/CachingExecutor.java</url>
           <line>23</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/yiranzhaojiu/minmybatis/v2/cache/CacheKey.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="29" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/yiranzhaojiu/minmybatis/v2/plugin/Plug.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
