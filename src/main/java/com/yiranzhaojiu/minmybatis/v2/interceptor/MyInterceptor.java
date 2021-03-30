@@ -2,11 +2,13 @@ package com.yiranzhaojiu.minmybatis.v2.interceptor;
 
 
 import com.yiranzhaojiu.minmybatis.v2.plugin.Interceptor;
+import com.yiranzhaojiu.minmybatis.v2.plugin.Intercepts;
 import com.yiranzhaojiu.minmybatis.v2.plugin.Invocation;
 import com.yiranzhaojiu.minmybatis.v2.plugin.Plug;
 
 import java.util.Arrays;
 
+@Intercepts("query")
 public class MyInterceptor implements Interceptor {
     @Override
     public Object intercept(Invocation invocation) throws Throwable {

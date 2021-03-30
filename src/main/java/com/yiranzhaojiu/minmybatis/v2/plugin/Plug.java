@@ -21,6 +21,11 @@ public class Plug implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        return interceptor.intercept(new Invocation(target, method, args));
+        if(interceptor.getClass().isAnnotationPresent(Intercepts.class)&&
+            method.getName().equals(interceptor.getClass().getAnnotation(Intercepts.class).value())){
+            return interceptor.intercept(new Invocation(target, method, args));
+        }
+        // 非被拦截方法，执行原逻辑
+        return method.invoke(target,args);
     }
 }
