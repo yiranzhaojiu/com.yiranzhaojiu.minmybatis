@@ -6,3 +6,4 @@ target/classes/com/yiranzhaojiu/minmybatis/v2/plugin/Intercepts.class
 target/classes/com/yiranzhaojiu/minmybatis/v2/interceptor/MyInterceptor.class
 target/classes/com/yiranzhaojiu/minmybatis/v2/plugin/Plug.class
 target/classes/com/yiranzhaojiu/minmybatis/v2/interceptor/MyInterceptor.class
+.idea/workspace.xml

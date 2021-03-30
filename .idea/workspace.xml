@@ -124,7 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1616964316433</updated>
       <workItem from="1616964325844" duration="32217000" />
-      <workItem from="1617089950807" duration="5997000" />
+      <workItem from="1617089950807" duration="6266000" />
     </task>
     <servers />
   </component>
@@ -155,12 +155,7 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/yiranzhaojiu/minmybatis/v2/plugin/Plug.java</url>
           <line>28</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/yiranzhaojiu/minmybatis/v2/V2MinMybatisTest.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="29" />
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
