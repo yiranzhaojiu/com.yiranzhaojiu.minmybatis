@@ -1,6 +1,5 @@
 package com.yiranzhaojiu.minmybatis.v2.interceptor;
 
-
 import com.yiranzhaojiu.minmybatis.v2.plugin.Interceptor;
 import com.yiranzhaojiu.minmybatis.v2.plugin.Intercepts;
 import com.yiranzhaojiu.minmybatis.v2.plugin.Invocation;
